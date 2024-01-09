@@ -13,7 +13,13 @@ console.log(sumWithReduce([])); // 0
 */
 
 let sumWithReduce = function(nums) {
-  // Your code here
+  if(nums.length==0){
+      return []
+  }
+  let arr = nums.reduce((acc,el)=>{
+      return acc+el
+  })
+  return arr
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
