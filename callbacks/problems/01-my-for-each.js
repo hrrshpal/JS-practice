@@ -2,9 +2,6 @@
 Write a function `myForEach` that accepts an array and a callback as arguments.
 The function should call the callback on each element of the array, passing in the
 element, index, and array itself. The function does not need to return any value.
-
-Do not use the built in Array#forEach.
-
 Examples:
 
 myForEach(['a', 'b', 'c'], function (el, i) {
@@ -21,8 +18,10 @@ myForEach(['laika', 'belka'], function (el) {
 console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
 
-let myForEach = function() {
-
+let myForEach = function(arr,cb) {
+    for(let i=0; i<arr.length; i++){
+        cb(arr[i])
+    }
 };
 
 

@@ -1,12 +1,7 @@
 /*******************************************************************************
-Write a function `selectiveMap` that accepts an array and two callbacks as arguments.
-The function should return a new array where elements are replaced with the results
-of calling the second callback on the element only if calling the first callback
-on the element results in true. If calling the first callback on an element results
-in false, then the element should not be changed in the new array.
+Write a function `selectiveMap` that accepts an array and two callbacks as arguments.The function should return a new array where elements are replaced with the results of calling the second callback on the element only if calling the first callback on the element results in true. If calling the first callback on an element results in false, then the element should not be changed in the new array.
 
-Note that that you cannot use the Array `map` or `filter` methods to solve this
-problem.
+Note that that you cannot use the Array `map` or `filter` methods to solve this problem.
 
 Examples:
 
@@ -42,14 +37,17 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - How many times are you calling each callback function?
 *******************************************************************************/
 
-let selectiveMap = function() {
-
+let selectiveMap = function(arr, cb1, cb2) {
+    let newarr=[]
+    for(let i=0; i<arr.length; i++){
+        if(cb1(arr[i])===true){
+            newarr.push(cb2(arr[i]))
+        } else{
+            newarr.push(arr[i])
+        }
+    }
+    return newarr
 };
-
-
-
-
-
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = selectiveMap;

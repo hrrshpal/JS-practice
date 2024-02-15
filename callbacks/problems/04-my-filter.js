@@ -1,8 +1,6 @@
 /*******************************************************************************
 Write a function `myFilter` that accepts an array and a callback as arguments.
-The function should call the callback on each element of the array, passing in
-the element. The function should return a new array containing
-the elements that result in true when passed to the callback.
+The function should call the callback on each element of the array, passing in the element. The function should return a new array containing the elements that result in true when passed to the callback.
 
 Do not use the built in Array#filter.
 
@@ -19,8 +17,14 @@ let result2 = myFilter(['choose', 'big', 'words', 'only'], function (s) {
 console.log(result2);      // ['choose', 'words', 'only']
 *******************************************************************************/
 
-let myFilter = function() {
-
+let myFilter = function(arr,cb) {
+    let newarr = []
+    for(let i=0; i<arr.length; i++){
+        if(cb(arr[i])===true){
+            newarr.push(arr[i])
+        }
+    }
+    return newarr
 };
 
 
