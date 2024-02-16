@@ -1,7 +1,6 @@
 /***********************************************************************
 Write a function named `arrowRestSum` that accepts all incoming parameters
 and sums them. Assign the below function to a variable using the const keyword.
-
 **Hint**: Use rest parameter syntax!
 
 Examples:
@@ -11,7 +10,11 @@ arrowRestSum(0); // => 0
 ***********************************************************************/
 
 const arrowRestSum = (...otherNums) => {
-  // Your code here
+  let sum=0
+  for(let num of otherNums){
+    sum+=num
+  }
+  return sum
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

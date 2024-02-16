@@ -5,8 +5,6 @@ Let's give some old functions a new flair by rewriting them using fat arrow synt
 Write a function `addFive` that accepts a number and will return that number
 plus 5. Write this function on a single line, and utilize a fat arrow function's 
 ability to implicitly return by leaving out your own return statement.
-
-
 Examples:
 let result1 = addFive(0); // returns 5
 let result2 = addFive(10); // returns 15
@@ -16,6 +14,9 @@ let result3 = addFive(37); // returns 42
 ***********************************************************************/
 
 // Your code here
+let addFive = num =>{
+  return num+5
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
